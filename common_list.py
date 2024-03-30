@@ -11,4 +11,5 @@ def common_list(a, b):
                 new_list.append(i)
     return new_list
 
+
 print(common_list(a, b))
