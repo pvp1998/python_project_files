@@ -10,9 +10,9 @@ csvfile = open('/Users/vidyaprakashperam/Downloads/CSVtoSQLite/population_data.c
 results = csv.reader(csvfile)
 results.__next__()
 #
-for row in results:
-    if row[1] not in list(cur.execute("SELECT city from population").fetchall()):
-        cur.execute("INSERT INTO population values (?,?,?)", row)
+# for row in results:
+#     if row[1] not in list(cur.execute("SELECT city from population").fetchall()):
+#         cur.execute("INSERT INTO population values (?,?,?)", row)
 #
 #
 # #
@@ -20,6 +20,8 @@ for row in results:
 # # #
 connect.commit()
 # # #
-print(cur.execute("SELECT city from population").fetchall())
+print(cur.execute("SELECT * from population").fetchall())
+connect.commit()
+
 # # #
 connect.close()
