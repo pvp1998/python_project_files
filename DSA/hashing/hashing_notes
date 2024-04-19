@@ -1,0 +1,23 @@
+Collision - When different values put through hashing algorithm,
+It will generate the same ouput when ideally it shouldn't
+
+Collision Resolution Techniques:
+Direct chaining - Colliding items are stored as linked list.
+Physical location of the input is stored linking physical location of the another input having the same value of hash function.
+In case of direct chaining, full hash table problem never raises
+
+Open Addressing:
+    Colliding elements are stored in other vacant bucket. During storing and lookup these elements are found through probing
+    Need to create hash table based on number of input elements.
+
+    Linear Probing: Place the new key in the closest following empty cell
+    Quadratic Probing: Adding a arbitrary polynomial to the index until an empty cell is found.
+        index + 1^2 - if not empty next
+        index + 2^2 - if not empty next
+        index + 3^2
+    Double Hashing: if not empty, a second hash function is called and result is added with the index of first hash function
+
+
+When to use what?
+If the input size is know, we use Open addressing
+
