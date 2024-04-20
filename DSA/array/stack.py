@@ -1,30 +1,28 @@
-arr = [1, 2, 3, 4, 6, 7, 9]
+l1 = [1,1,1,2,2,3]
+l2 = [0,0,1,1,1,1,2,3,3]
 
 
-def missing_number(arr):
-    for i in range(len(arr) + 1):
-        if arr[i] + 1 != arr[i+1]:
-            return arr[i] + 1
+def max_two_list(l1):
+    new_dict = {}
+    threshold = 2
+    breaching_count = 0
+    for i in l1:
+        if i not in new_dict.keys():
+            new_dict[i] = 1
+        else:
+            new_dict[i] = new_dict.get(i,0) + 1
+
+    for value in new_dict.values():
+        if value > threshold:
+            diff = value - threshold
+            breaching_count += diff
+
+    print(len(l1) - breaching_count)
 
 
-print(missing_number(arr))
+print(max_two_list(l2))
 
 
-def missing(arr, n):
-    for i in range(n):
-        if arr[i] + 1 != arr[i+1]:
-            return arr[i] + 1
-
-
-
-
-def missing_natural(arr, n):
-    sum_n = (n * (n + 1))/2
-    sum_arr = sum(arr)
-    miss = sum_n - sum_arr
-    return miss
-
-print(missing_natural(arr, 6))
 
 
 
