@@ -1,5 +1,4 @@
-
-#Identify missing number in a naturally ordered sorted list
+# Identify missing number in a naturally ordered sorted list
 # miss = [1, 2, 3, 4, 6]
 # num = 6
 #
@@ -9,7 +8,7 @@
 #     missing = sum_natural_n - sum_arr
 #     return missing
 
-#print(missing_nums(miss, num))
+# print(missing_nums(miss, num))
 
 
 # Two sum pairs with dictionary
@@ -24,7 +23,7 @@
 #             return [seen[complement], i]
 #         seen[num] = i
 
-#print(two_sum(nums, target))
+# print(two_sum(nums, target))
 
 # Find out the max of two products
 # arr = [1, 7, 3, 4, 9, 5]
@@ -58,7 +57,6 @@
 # print(max_two_product_three(new_arr))
 
 
-
 # l1 = [1,1,1,2,2,3]
 # l2 = [0,0,1,1,1,1,2,3,3]
 #
@@ -80,7 +78,7 @@
 #     print(len(l1) - breaching_count)
 
 
-#print(max_twotimes_list(l2))
+# print(max_twotimes_list(l2))
 
 # Diagonal sum of two-dimensional list
 
@@ -111,8 +109,8 @@
 #
 # print(two_best_scores(mylist))
 
-arr1 = [1,2,2,1,1,3]
-arr3 = [-3,0,1,-3,1,1,1,-3,10,0]
+arr1 = [1, 2, 2, 1, 1, 3]
+arr3 = [-3, 0, 1, -3, 1, 1, 1, -3, 10, 0]
 
 # def uniqueOccurrences(arr):
 #     new_dict = {}
@@ -132,21 +130,49 @@ arr3 = [-3,0,1,-3,1,1,1,-3,10,0]
 #
 # print(uniqueOccurrences(arr1))
 
-nums1 = [1,2,3]
-nums2 = [2,4,6]
-
-def find_difference(num1, num2):
-    for i in num1:
-        if i in num2:
-            num1.
+l = [1, 2, -2, 1, 4, 6, 12, 43]
 
 
+# def second_highest(l):
+#     max1 = float("-inf")
+#     max2 = float("-inf")
+#     for i in l:
+#         if i > max1:
+#             max2 = max1
+#             max1 = i
+#         elif i > max2 and i < max1:
+#             max2 = i
+#
+#     return max2
+#
+#
+# print(second_highest(l))
+#
+# l = [1, 2, -2, 1, 4, 6, 12, 43]
+#
+# def print_unique_values(l):
+#     return list(set(l))
+#
+# print(print_unique_values(l))
 
 
+# list1 = ["vidya", "mahesh", "varma"]
+# list2 = ["vidya", "mahesh", "varma"]
+#
+# def unique_names(l1,l2):
+#     combined_list = l1 + l2
+#     return list(set(combined_list))
+#
+#
+# print(unique_names(list1, list2))
 
 
+def gcd(num1, num2):
+    new_var = min(num1, num2)
+    max_var = 0
+    for i in range(1, new_var+1):
+        if num1 % i == 0 and num2 % i == 0:
+            max_var = max(max_var, i)
+    return max_var
 
-
-
-
-
+print(gcd(18, 6))
